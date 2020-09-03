@@ -1,11 +1,17 @@
 // Here are a set of katas you could do with TDD - make sure you write them with correct types! Each one should prompt you to discover something a bit new about how Typescript handles certain situations. In some situations, you might find it simpler to write some additional definitions outside of the function. These do get pretty tricky pretty quickly! If you need to practice more with simpler ones, grab some of the katas from Fundamentals, and rewrite these with typescript. You can also learn a lot from writing typed versions of functions for a utility library like lodash or ramda.
 
-export function multiply() {
+export function multiply(x: number, y: number): number {
   // take two numbers and return them multiplied together
+  return x * y
 }
 
-export function sumSome() {
+export function sumSome(nums: number[]): number {
   // take an unlimited number of numbers and return the total
+  let sum: number = 0;
+  for (let i = 0; i < nums.length; i++) {
+    sum += nums[i];
+  }
+  return sum;
 }
 
 export function rotateString() {

@@ -1,13 +1,19 @@
 {
   "compilerOptions": {
     "outDir": "./built",
-    "allowJs": true
+    "allowJs": true,
+    "types": [
+      "jest",
+      "node"
+    ]
   },
   "include": [
-    "./src/**/*"
+    "./src/**/*",
+    "__tests__/index.spec.ts",
+    "src/__tests__/index.spec.ts"
   ],
   "exclude": [
     "node_modules",
-    "**/*.spec.ts"
+    // "**/*.spec.ts"
   ]
 }
