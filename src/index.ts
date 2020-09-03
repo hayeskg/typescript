@@ -14,10 +14,18 @@ export function sumSome(nums: number[]): number {
   return sum;
 }
 
-export function rotateString() {
+export function rotateString(stringToRotate: string, rotateBy?: number): string {
   // take a string and return another string that is 'rotated' (last letter moves to first position) the number of times in the second parameter (defaulting to 1) i.e.
   // rotateString('hello', 3) // 'llohe'
   // rotateString('bye') // 'eby'
+  let stringArr: string[] = stringToRotate.split('');
+  let stop: number = rotateBy || 1;
+  for (let i = 1; i <= stop; i++) {
+    let temp = stringArr.pop();
+    stringArr.unshift(temp);
+  }
+  return stringArr.join('');
+
 }
 
 export function findMostSuitableOutfit() {

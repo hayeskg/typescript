@@ -27,7 +27,8 @@ describe('sumSome()', () => {
 
 describe('rotateString()', () => {
   test('takes an unknown length of numbers array, returns the sum', () => {
-    // expect(rotateString([3, 4, 11])).toBe(18);
+    expect(rotateString('hello', 3)).toBe('llohe');
+    expect(rotateString('bye')).toBe('eby');
   });
 })
 
